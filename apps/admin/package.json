@@ -1,0 +1,20 @@
+{
+  "name": "admin",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@mui/icons-material": "^5.14.8",
+    "jsonwebtoken": "^9.0.2",
+    "ui": "*",
+    "db": "*"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.3"
+  }
+}
