@@ -7,20 +7,20 @@ import {RecoilRoot} from 'recoil';
 import Head from 'next/head';
 
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps, router }: AppProps) {
   return <SessionProvider session={pageProps.session}>
     <RecoilRoot>
       <Head>
         <title>Course Hub</title>
       </Head>
-      <App2 Component={Component} pageProps={pageProps}></App2>
+      <App2 Component={Component} pageProps={pageProps} router={router}></App2>
     </RecoilRoot>
   </SessionProvider>
 }
 
 
 
-function App2({Component, pageProps}){  
+function App2({Component, pageProps}: AppProps){  
 
   const router = useRouter();
   const session = useSession();
