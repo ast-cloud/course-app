@@ -112,7 +112,7 @@ export default function Course(){
             <div style={{display:'flex', flexDirection:isScreenWidthGT800?'row':'column', justifyContent:'space-between', marginTop:35, marginLeft:isSmallScreen?0:20, marginRight:isSmallScreen?0:20, border:'0px solid black'}}>
 
                 <div style={{width:isScreenWidthGT800?'45%':'90%', alignSelf:isScreenWidthGT800?'auto':'center', border:'0px solid black'}}>
-                    <img src={course.imageLink} style={{borderRadius:5, width:'100%'}} />
+                    <img src={course.imageLink} style={{borderRadius:5, width:'100%'}} alt='' />
                 </div>
                 
                 <div style={{display:'flex', flexDirection:'column', alignSelf:isScreenWidthGT800?'auto':'center', justifyContent:'space-between', paddingTop:isScreenWidthGT1000?'10px':'0px', marginTop:isScreenWidthGT800?'0px':'20px', paddingBottom:isScreenWidthGT1000?'20px':'20px', width:isScreenWidthGT800?'55%':'90%', border:'0px solid black'}}>
@@ -263,7 +263,7 @@ export default function Course(){
 
 //             <div style={{display:'flex', justifyContent:'space-between', marginTop:35, marginLeft:isSmallScreen?0:20, marginRight:isSmallScreen?0:20, border:'1px solid black'}}>
 //                 <div style={{width:isScreenWidthGT800?'45%':'90%', alignSelf:isScreenWidthGT800?'auto':'center', border:'0px solid black'}}>
-//                     <img src={course.imageLink} style={{borderRadius:5,}} />
+//                     <img src={course.imageLink} style={{borderRadius:5,}} alt='' />
 //                 </div>
 //                 <div style={{display:'flex', flexDirection:'column', justifyContent:'space-between', paddingTop:'25px', paddingBottom:'25px', width:'55%', border:'0px solid black'}}>
 //                     <Typography variant='h6' sx={{marginLeft:'25px', marginRight:'25px'}}>{course.description}</Typography>

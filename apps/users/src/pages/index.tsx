@@ -101,16 +101,16 @@ function Slides(){
   return <div style={carouselStyle}>
     <Carousel className='carousel-container' showThumbs={false} swipeable={true} showArrows={true} autoPlay={true} emulateTouch={true} showStatus={false} >
       <div className='carousel-item'>
-          <img src="/1.jpg" style={imageStyle}/>
+          <img src="/1.jpg" style={imageStyle} alt=''/>
       </div>
       <div className='carousel-item'>
-          <img src="/2.jpg" style={imageStyle}/>
+          <img src="/2.jpg" style={imageStyle} alt=''/>
       </div>
       <div className='carousel-item'>
-          <img src="/3.jpg" style={imageStyle}/>
+          <img src="/3.jpg" style={imageStyle} alt=''/>
       </div>
       <div className='carousel-item'>
-          <img src="/4.jpg" style={imageStyle}/>
+          <img src="/4.jpg" style={imageStyle} alt=''/>
       </div>
     </Carousel>
   </div>
@@ -133,16 +133,16 @@ function LoggedOutSlides(){
   return <div style={carouselStyle}>
     <Carousel className='carousel-container' showThumbs={false} swipeable={true} showArrows={true} autoPlay={true} emulateTouch={true} showStatus={false} swipeScrollTolerance={50} useKeyboardArrows={true} infiniteLoop={true}>
       <div className='carousel-item'>
-          <img src="/1.jpg" style={imageStyle}/>
+          <img src="/1.jpg" style={imageStyle} alt=''/>
       </div>
       <div className='carousel-item'>
-          <img src="/2.jpg" style={imageStyle}/>
+          <img src="/2.jpg" style={imageStyle} alt=''/>
       </div>
       <div className='carousel-item'>
-          <img src="/3.jpg" style={imageStyle}/>
+          <img src="/3.jpg" style={imageStyle} alt=''/>
       </div>
       <div className='carousel-item'>
-          <img src="/4.jpg" style={imageStyle}/>
+          <img src="/4.jpg" style={imageStyle} alt=''/>
       </div>
     </Carousel>
   </div>

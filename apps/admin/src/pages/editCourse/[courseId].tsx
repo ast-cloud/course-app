@@ -158,7 +158,7 @@ export default function Course(){
 
             <div style={{display:'flex', flexDirection:isScreenWidthGT800?'row':'column', justifyContent:'space-between', marginTop:35, marginLeft:isSmallScreen?0:20, marginRight:isSmallScreen?0:20, border:'0px solid black'}}>
                 <div style={{width:isScreenWidthGT800?'45%':'90%', alignSelf:isScreenWidthGT800?'auto':'center', border:'0px solid black'}}>
-                    <img src={course.imageLink} style={{borderRadius:5, width:'100%'}} />
+                    <img src={course.imageLink} style={{borderRadius:5, width:'100%'}} alt='' />
                     <br /><br />
                     <TextField label='Image Link' variant='outlined' defaultValue={course.imageLink} fullWidth={true} onChange={function(e){setImageLink(e.target.value)}}/>
                 </div>
