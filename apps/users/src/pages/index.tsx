@@ -60,7 +60,7 @@ export default function Home({session}: any) {
                   <Typography variant='h5' style={{fontWeight: 'normal', alignSelf:'center'}}>A place to learn and grow</Typography>
                 </div>
                 <div style={{marginTop:0, width:'90%', alignSelf:'end'}}>  
-                  <Typography variant='subtitle2' style={{fontWeight: 'normal'}}>Discover the possibilities that await you with our comprehensive courses. Whether you're a curious beginner or a seasoned professional, we're here to fuel your journey towards success.</Typography>
+                  <Typography variant='subtitle2' style={{fontWeight: 'normal'}}>Discover the possibilities that await you with our comprehensive courses. Whether you&apos;re a curious beginner or a seasoned professional, we&apos;re here to fuel your journey towards success.</Typography>
                 </div>
                 <div style={{display:'flex', width:'80%', justifyContent:'space-evenly', alignItems:'flex-start', marginBottom:0}}>
                   <Button variant='contained' size='small' sx={{ height: '100%', backgroundColor: '#645cff', textTransform:'none', fontSize:15}} onClick={function(){signIn();}}>Login</Button>
