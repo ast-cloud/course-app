@@ -11,5 +11,8 @@
       "cache": false,
       "persistent": true
     }
-  }
+  },
+  "globalEnv": [
+    "MONGO_URL", "ADMIN_USERNAME", "ADMIN_PASSWORD", "JWT_SECRET", "NEXT_GOOGLE_CLIENT_ID", "NEXT_GOOGLE_CLIENT_SECRET", "NEXT_AUTH_URL", "NEXT_AUTH_SECRET", "RECOIL_DUPLICATE_ATOM_KEY_CHECKING_ENABLED"
+  ]
 }
