@@ -10,7 +10,7 @@ export async function checkCreds(email: string, password: string){
             var a = await User.findOne({email: email});   
             if(a){
                 if(a.password == password){
-                    return {'email': a.email, 'password': a.password, 'name': a.name, 'image': a.image};
+                    return a;
                 }
                 else{
                     return null;
