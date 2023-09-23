@@ -32,7 +32,7 @@ export default function Home({session}: any) {
 
   useEffect(function(){
     const fetchData = async function(){
-      var ftCourses = await axios.get('http://localhost:3000/api/featuredCourses');
+      var ftCourses = await axios.get('/api/featuredCourses');
       if(ftCourses.status==200){
         console.log('ftCourses.data - ', JSON.stringify(ftCourses.data))
         setFeaturedCourses(ftCourses.data.courses);
