@@ -9,6 +9,8 @@ import { getServerSession } from 'next-auth';
 import { authOptions } from './api/auth/[...nextauth]';
 import  { useEffect, useState } from 'react';
 import axios from 'axios';
+import Image from 'next/image';
+
 
 
 const inter = Inter({ subsets: ['latin'] });
@@ -122,7 +124,8 @@ function LoggedOutSlides(){
     width: '90%',
     marginTop: '0%',
     overflow:'hidden',
-    borderRadius:'8px'
+    borderRadius:'8px',
+    border:'0px solid black'
   } as React.CSSProperties;
 
   const imageStyle = {
@@ -130,19 +133,24 @@ function LoggedOutSlides(){
     width: '100%',
   } as React.CSSProperties;
 
+  const imageContainerStyle = {
+    height: '100%',
+    width: '100%',
+  } as React.CSSProperties;
+
   return <div style={carouselStyle}>
     <Carousel className='carousel-container' showThumbs={false} swipeable={true} showArrows={true} autoPlay={true} emulateTouch={true} showStatus={false} swipeScrollTolerance={50} useKeyboardArrows={true} infiniteLoop={true}>
       <div className='carousel-item'>
-          <img src="/1.jpg" style={imageStyle} alt=''/>
+          <Image src="/1.jpg" fill={true} alt='' className={'image'}/>
       </div>
       <div className='carousel-item'>
-          <img src="/2.jpg" style={imageStyle} alt=''/>
+          <Image src="/2.jpg" fill={true} alt='' className={'image'}/>
       </div>
       <div className='carousel-item'>
-          <img src="/3.jpg" style={imageStyle} alt=''/>
+          <Image src="/3.jpg" fill={true} alt='' className={'image'}/>
       </div>
       <div className='carousel-item'>
-          <img src="/4.jpg" style={imageStyle} alt=''/>
+          <Image src="/4.jpg" fill={true} alt='' className={'image'}/>
       </div>
     </Carousel>
   </div>

@@ -44,3 +44,20 @@
 body{
     background-image: url('/bg50.jpg');
 }
+
+.carousel-item {
+
+    width: 100%;
+    border: 0px solid black;
+    > div {
+      position: unset !important;
+    }
+  
+    .image {
+      object-fit: contain;
+      width: 100% !important;
+      position: relative !important;
+      height: unset !important;
+      border-radius: 8px;
+    }
+  }
