@@ -95,7 +95,7 @@ export default function Course(){
     }
     else if(course===null){
         return(
-          <div>
+          <div style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
             Cannot load data.
           </div>
         );

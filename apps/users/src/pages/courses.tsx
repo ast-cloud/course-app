@@ -106,7 +106,7 @@ export default function Courses({session}: any) {
 
             {selectedTab === 1 && purchasedCourses===null && <div style={{display:'flex', justifyContent:'center', alignItems:'center', marginTop:'20%'}}> Could not load data! </div> }
 
-            {selectedTab === 1 && purchasedCourses?.length==0 && <div style={{display:'flex', justifyContent:'center', alignItems:'center', marginTop:'0%'}}> No purchased courses yet! </div> }
+            {selectedTab === 1 && purchasedCourses?.length==0 && <div style={{display:'flex', justifyContent:'center', alignItems:'center', height:'64vh', border:'0px solid black'}}> No purchased courses yet! </div> }
             
         </div>
       )
