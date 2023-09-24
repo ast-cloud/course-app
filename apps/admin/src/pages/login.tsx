@@ -69,7 +69,7 @@ export default function Login() {
     setSnackbar({...snackbar, open:false});
   };
 
-  return <div>
+  return <div style={{height:'70vh', border:'0px solid black'}}>
         <div style={{display:'flex', justifyContent:'center', marginTop:75}}>     
             <Typography variant="h6">Course Hub admin sign In</Typography>
         </div>
