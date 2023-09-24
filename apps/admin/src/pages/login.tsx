@@ -74,12 +74,12 @@ export default function Login() {
             <Typography variant="h6">Course Hub admin sign In</Typography>
         </div>
         <div style={{display:'flex', justifyContent:'center'}}>
-            <Card variant="outlined" style={{width:400, padding:40, marginTop:20}}>
+            <Card variant="outlined" style={{width:400, padding:70, marginTop:20, borderRadius:'8px'}}>
                 <TextField variant="outlined" fullWidth={true} label='Email' onChange={function(e){setEmail(e.target.value)}}></TextField>
                 <br/><br/>
                 <TextField variant="outlined" fullWidth={true} label='Password' type='password' onChange={function(e){setPassword(e.target.value)}} onKeyUp={function(e){if(e.key=='Enter'){handleSignIn();}}}></TextField>
                 <br/><br/><br/><br/>
-                <Button variant="contained" fullWidth={true} onClick={handleSignIn}>Sign In</Button>
+                <Button variant="contained" fullWidth={true} sx={{backgroundColor:'#645cff'}} onClick={handleSignIn}>Sign In</Button>
             </Card>
         </div>
         <Snackbar open={snackbar.open} autoHideDuration={4000} onClose={handleSnackbarClose} anchorOrigin={{vertical:'bottom', horizontal:'center'}}><Alert severity={snackbar.severity=='error'?"error":"success"}>{snackbar.text}</Alert></Snackbar>
