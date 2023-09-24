@@ -52,10 +52,10 @@ export function AppBar(props:any){
                 </IconButton>
                 
                 <Menu anchorEl={anchorEl} open={mobileMenuOpen} onClose={handleMenuClose} sx={{display: {xs: 'block', sm: 'none'} }} >
-                    <MenuItem onClick={handleMenuClose}>Home</MenuItem>
-                    <MenuItem onClick={handleMenuClose}>Courses</MenuItem>
-                    <MenuItem onClick={handleMenuClose}>About Us</MenuItem>
-                    <MenuItem onClick={handleMenuClose}>Contact</MenuItem>
+                    <MenuItem onClick={function(){handleMenuClose(); props.router.push('/');}}>Home</MenuItem>
+                    <MenuItem onClick={function(){handleMenuClose(); props.router.push('/courses');}}>Courses</MenuItem>
+                    <MenuItem onClick={function(){handleMenuClose(); props.router.push('/aboutus');}}>About Us</MenuItem>
+                    <MenuItem onClick={function(){handleMenuClose(); props.router.push('/contact');}}>Contact</MenuItem>
                     {props.session.data?<MenuItem onClick={() => {
                             setSelectedTab(0);
                             handleMenuClose();
