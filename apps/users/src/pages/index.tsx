@@ -1,10 +1,9 @@
 import { Inter } from 'next/font/google';
 import {signIn, useSession, signOut} from 'next-auth/react';
-import {useRouter} from 'next/router';
-import { Grid, Button, Typography, Card, CardMedia, CardContent, CircularProgress } from '@mui/material';
+import { Grid, Button, Typography, CircularProgress } from '@mui/material';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { CourseCard, Footer } from 'ui';
+import { CourseCard } from 'ui';
 import { getServerSession } from 'next-auth';
 import { authOptions } from './api/auth/[...nextauth]';
 import  { useEffect, useState } from 'react';
@@ -155,29 +154,6 @@ function LoggedOutSlides(){
     </Carousel>
   </div>
 }
-
-// function Course(props) {
-  
-//   const router = useRouter();
-
-//   return <Card onClick={function(){router.push('/course/'+props.id)}} style={{width:250, height:260, marginTop:25, marginRight:20, cursor:'pointer'}}>
-//         <CardMedia sx={{ height: 140}} image={props.image} title={props.title} />
-//         <CardContent>
-//             <Typography variant='body2'>
-//                 aaaa{props.title}
-//             </Typography>
-//             <Typography variant="body2">
-//                 {props.description}
-//             </Typography>
-//             <br />
-//             <div style={{display:'flex', justifyContent:'space-between'}}>
-//                 <Typography variant="body2">
-//                     {props.price}
-//                 </Typography>
-//             </div>
-//         </CardContent>
-//     </Card>
-// }
 
 
 export async function getServerSideProps(context: any){
