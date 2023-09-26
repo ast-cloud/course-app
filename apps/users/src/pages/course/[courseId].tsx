@@ -26,6 +26,8 @@ export default function Course(){
     const [course, setCourse] = useState<undefined|null|CourseDetailsInfoForUsers>(undefined);
     const [isPurchased, setIsPurchased] = useState<undefined|boolean>(undefined);
 
+    const [reRender, setReRender] = useState(false);
+    console.log('rerender value - ', reRender);
     useEffect(function(){
 
         const fetchData = async ()=>{
@@ -50,7 +52,7 @@ export default function Course(){
 
         fetchData();
 
-    },[]);
+    },[reRender]);
    
     function handleBuy(){
         if(session.data){
@@ -88,22 +90,24 @@ export default function Course(){
 
     if(course===undefined){
         return (
-            <div style={{display:'flex', justifyContent:'center', alignItems:'center', marginTop:'20%'}}>
+            <div style={{display:'flex', justifyContent:'center', alignItems:'center', height:'74vh'}}>
                 <CircularProgress/>
             </div>
         );
     }
     else if(course===null){
         return(
-          <div style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
-            Cannot load data.
+          <div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', height:'74vh'}}>
+            <Typography variant='h6' sx={{fontWeight:'bold'}}>Cannot load data!</Typography>
+            <br /><br />
+            <Button variant='contained' size='small' sx={{ textTransform:'none', backgroundColor:'#645cff'}} onClick={function(){setCourse(undefined); setReRender(!reRender);}}>Refresh</Button>
           </div>
         );
     }
     else{
 
         return (
-        <div style={{display:'flex', flexDirection:'column'}}>
+        <div style={{display:'flex', flexDirection:'column', height:'74vh'}}>
 
             <div style={{display:'flex', justifyContent: isScreenWidthGT800 ? 'flex-start':'center',  marginTop:55, marginLeft: isSmallScreen?0:20, marginRight: isSmallScreen?0:20, border:'0px solid black'}}>
                 <Typography variant='h6'>{course.title}</Typography>
