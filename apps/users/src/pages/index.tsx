@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google';
 import {signIn, useSession, signOut} from 'next-auth/react';
-import { Grid, Button, Typography, CircularProgress } from '@mui/material';
+import { Grid, Button, Typography, CircularProgress, useMediaQuery } from '@mui/material';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { CourseCard } from 'ui';
@@ -88,7 +88,7 @@ export default function Home({session}: any) {
 function Slides(){
 
   const imageStyle = {
-    height: '20vw',
+    height: useMediaQuery('(max-width: 900px)')? '35vw':'20vw',
     width: '90vw',
     borderRadius:'8px'
   } as React.CSSProperties;
