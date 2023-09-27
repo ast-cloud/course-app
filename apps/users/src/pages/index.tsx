@@ -65,7 +65,7 @@ export default function Home({session}: any) {
                 </div>
                 <div style={{display:'flex', width:'80%', justifyContent:'space-evenly', alignItems:'flex-start', marginBottom:0}}>
                   <Button variant='contained' size='small' sx={{ height: '100%', backgroundColor: '#645cff', textTransform:'none', fontSize:15}} onClick={function(){signIn();}}>Login</Button>
-                  <Button variant='contained' size='small' sx={{ height: '100%', backgroundColor: '#645cff', textTransform:'none', fontSize:15}} onClick={function(){signOut();}}>Signup</Button>
+                  <Button variant='contained' size='small' sx={{ height: '100%', backgroundColor: '#645cff', textTransform:'none', fontSize:15}} onClick={function(){signIn();}}>Signup</Button>
                 </div>
           </Grid>
 
