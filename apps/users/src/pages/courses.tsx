@@ -127,12 +127,12 @@ export default function Courses({session}: any) {
     }
   
     
-  }
+}
   
-  export async function getServerSideProps(context: any){
-  
-    const session = await getServerSession(context.req, context.res, authOptions);  
-    console.log('Inside getServerSideProps, session - ', session);
-    return { props: {session} };
-  }
+export async function getServerSideProps(context: any){
+
+  const session = await getServerSession(context.req, context.res, authOptions);  
+  console.log('Inside getServerSideProps, session - ', session);
+  return { props: {session} };
+}
   
